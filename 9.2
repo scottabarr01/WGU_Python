@@ -1,0 +1,18 @@
+def os_counts(os_dict): 
+    os_count = {}
+
+    for username, os in os_dict.items():
+        if os in os_count:
+            os_count[os] += 1
+        else:
+            os_count[os] = 1
+    return os_count
+
+user_laptop_os = {"user1": "Windows", "user2": "MacOS", "user3": "Linux", "user4": "Windows", "user5": "Windows", "user6": "Linux", "user7": "MacOS", "user8": "Windows", "user9": "MacOS", "user10": "Linux"}
+
+# You may alter the code below to view your return value(s).
+# Only the os_counts function will be graded for this assessment.
+
+print(os_counts(user_laptop_os))
+
+
