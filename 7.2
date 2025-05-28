@@ -1,0 +1,25 @@
+network_devices = {
+    "router": "192.168.1.1",
+    "switch": "192.168.1.2",
+    "firewall": "192.168.1.3",
+    "server": "192.168.1.4",
+    "printer": "192.168.1.5"
+}
+
+device_name = input("enter a device name: ")
+
+if device_name not in network_devices:
+  print("Device not found")
+# do not edit above this line
+
+else:
+  ip = network_devices[device_name]
+  print(ip)
+
+# Expected output
+# Enter a device name: firewall
+# 192.168.1.3
+
+# Expected output
+# Enter a device name: laptop
+# Device not found
