@@ -1,0 +1,36 @@
+networking_dict = {
+    'router': {
+        'model': 'Cisco 2900 Series',
+        'ports': 24,
+        'ip_address': '192.168.1.1',
+        'subnet_mask': '255.255.255.0'
+    },
+    'switch': {
+        'model': 'Juniper EX Series',
+        'ports': 48,
+        'ip_address': '192.168.1.2',
+        'subnet_mask': '255.255.255.0'
+    },
+    'firewall': {
+        'model': 'Palo Alto Networks PA-220',
+        'ports': 8,
+        'ip_address': '192.168.1.3',
+        'subnet_mask': '255.255.255.0'
+    }
+}
+# do not edit above this line
+
+# alter the number of ports on the router to "28"
+networking_dict['router']['ports'] = '28'
+
+# change the subnet mask of the firewall to "255.255.254.0"
+networking_dict['firewall']['subnet_mask'] = '255.255.254.0'
+
+# remove the entry for the switch from the dictionary
+del networking_dict['switch']
+
+# do not edit below this line
+print(networking_dict)
+
+# Expected output
+# {'router': {'model': 'Cisco 2900 Series', 'ports': 28, 'ip_address': '192.168.1.1', 'subnet_mask': '255.255.255.0'}, 'firewall': {'model': 'Palo Alto Networks PA-220', 'ports': 8, 'ip_address': '192.168.1.3', 'subnet_mask': '255.255.254.0'}}
