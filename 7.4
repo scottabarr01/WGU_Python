@@ -1,0 +1,13 @@
+access_log_usernames = ['guest10', 'guest1', 'guest3', 'user5', 'guest10', 'admin8', 'admin10', 'user6', 'guest10', 'guest1', 'guest5', 'admin7', 'user2', 'admin6', 'guest4', 'guest6', 'admin3', 'guest4', 'admin7', 'admin6', 'admin8', 'admin8', 'guest7', 'admin5', 'user1', 'guest4', 'admin4', 'user10', 'user1', 'user9', 'user10', 'guest10', 'admin10', 'guest2', 'user6', 'user7', 'admin8', 'user1', 'guest8', 'admin4', 'admin5', 'user9', 'admin3', 'guest3', 'admin3', 'admin1', 'admin2', 'admin7', 'admin9', 'admin1']
+# do not edit above this line
+
+# create set "unique_usernames"
+unique_usernames = set(access_log_usernames)
+
+# do not edit below this line
+print("Number of logged usernames: ", len(access_log_usernames))
+print("Number of unique usernames: ", len(unique_usernames))
+
+# Expected output
+# Number of logged usernames:  50
+# Number of unique usernames:  26
