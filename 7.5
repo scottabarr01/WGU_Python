@@ -1,0 +1,22 @@
+protocol1 = {'TCP', 'UDP', 'ICMP', 'TCP', 'IGMP'}
+protocol2 = {'UDP', 'ICMP', 'HTTP', 'HTTPS', 'HTTPS'}
+# do not edit above this line
+
+# add "FTP" to protocol1
+protocol1.add('FTP')
+
+# combine sets into protocol1
+protocol1.update(protocol2)
+
+# remove "TCP" from combined protocol1
+protocol1.remove('TCP')
+
+# do not edit below this line
+print("Number of combined protocols: ", len(protocol1))
+print("Contains FTP: ", "FTP" in protocol1)
+print("Contains TCP: ", "TCP" in protocol1)
+
+# Expected output
+# Number of combined protocols:  6
+# Contains FTP:  True
+# Contains TCP:  False
