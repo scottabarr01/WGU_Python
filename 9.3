@@ -1,0 +1,23 @@
+def is_valid_ipv4(ip_address):
+    octets = ip_address.split('.')
+    if len(octets) != 4:
+        return False
+    for octet in octets:
+        if not octet.isdigit():
+            return False
+        try:
+            value = int(octet)
+            if value < 0 or value > 255:
+                return False
+        except ValueError:
+            return False
+    return True
+
+# You may alter the code below to view your return value(s).
+# Only the is_valid_ipv4 function will be graded for this assessment.
+
+# valid
+print(is_valid_ipv4("192.168.1.255"))
+
+# not valid
+print(is_valid_ipv4("255.ABC.450"))
