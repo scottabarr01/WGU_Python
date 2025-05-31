@@ -1,0 +1,19 @@
+# define check_network_status()
+def check_network_status(connection,firewall):
+    if connection == True and firewall == True:
+        return "No issues detected"
+    elif connection == True and firewall == False:
+        return "Proceed with caution"
+    elif not connection:
+        return "Network not detected"
+    else:
+        return "Unexpected network status"
+
+# You may alter the code below to view your return value(s).
+# Only the check_network_status function will be graded for this assessment.
+
+# No issues detected
+print(check_network_status(True, True))
+
+# Unexpected network status
+print(check_network_status(True, "Nope"))
