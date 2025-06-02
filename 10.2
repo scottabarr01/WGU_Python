@@ -1,0 +1,7 @@
+def generate_users(username_string, num_accounts):
+    return {f"{username_string}{num}" for num in range(1, num_accounts + 1)}
+
+# You may alter the code below to view your return value(s).
+# Only the generate_users function will be graded for this assessment.
+
+print(generate_users("test_account", 4))
