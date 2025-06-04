@@ -1,0 +1,25 @@
+def department_count(entries):
+    department_codes = ["HRD", "ENG", "MKT", "FIN", "IT"]
+    department_counts = {}
+    invalid_count = 0
+
+    # count entries per department
+    # return department_counts dictionary
+    # return invalid_count, excluding "TEST" values
+    for entry in entries:
+        if entry in department_codes:
+            department_counts[entry] = department_counts.get(entry, 0) +1
+        elif entry != "TEST":
+            invalid_count += 1
+    
+    return department_counts, invalid_count
+
+
+# You may alter the code below to view your return value(s).
+# Only the generate_users function will be graded for this assessment.
+
+entries = ['HRD', 'MKT', 'HRD', 'IT', 'ENG', 'HRD', 'TEST', 'HRD', 'TEST', 'HRD', 'HRD', 'TEST', 'IT', 'TEST', 'HRD', 'TEST', 'IT', 'TEST', 'ENG', 'MKT', 'TEST', 'IT', 'IT', 'HRD' 'GUEST']
+print(department_count(entries))
+
+# Expected return
+# ({'HRD': 7, 'MKT': 2, 'IT': 5, 'ENG': 2}, 1)
