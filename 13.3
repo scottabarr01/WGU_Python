@@ -1,0 +1,31 @@
+import ipaddress
+
+def get_ip_version(ip_address_str):
+    ip = None
+    version = None
+
+    try:
+        # Convert the string IP address to an IP object
+        ip = ipaddress.ip_address(ip_address_str)
+        # Get the version of the IP object
+        version = ip.version
+    except ValueError:
+        # Handle cases where the input string is not a valid IP address
+        print(f"Error: '{ip_address_str}' is not a valid IP address.")
+        ip = None
+        version = None
+    return ip, version
+
+
+# You may alter the code below to view your return value(s).
+# Only the get_ip_version function will be graded for this assessment.
+
+# Example usage: "192.168.1.1 is version 4"
+# results = get_ip_version("192.168.1.1")
+# print(f"{results[0]} is version {results[1]}")
+
+# Example usage: "2001:db8:85a3::8a2e:370:7334 is version 6"
+# results = get_ip_version("2001:0db8:85a3:0000:0000:8a2e:0370:7334")
+# print(f"{results[0]} is version {results[1]}")
+
+# help(ipaddress.ip_address)
