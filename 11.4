@@ -1,0 +1,20 @@
+def filter_list(input_list, num_items):
+    filtered_list = []
+    for entry in input_list:
+        if 0 <= entry <= 255:
+            filtered_list.append(entry)
+            if len(filtered_list) >= num_items:
+                break
+    return filtered_list
+
+
+# You may alter the code below to view your return value(s).
+# Only the filter_list function will be graded for this assessment.
+
+numeric_list = [12, 255, 256, 45, 67, 500, 150, -1, 0]
+
+print(filter_list(numeric_list, 10))
+# Expected return: [12, 255, 45, 67, 150, 0]
+
+print(filter_list(numeric_list, 3))
+# Expected return: [12, 255, 45]
