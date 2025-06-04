@@ -1,0 +1,32 @@
+def new_account(type_index, identifier):
+    # combines account type with identifer; returns string
+    account_types = ["admin", "user", "guest"]
+    account_id = account_types[type_index] + str(identifier)
+    return account_id
+
+def verify_account_type(type):
+    # identifies permission by account type; returns string
+    account_types = ["admin", "user", "guest"]
+    if type.lower() in account_types:
+        return f"{type} is a valid account type"
+    else:
+        return f"{type} is not a valid account type"
+    
+def list_slice(*args):
+    # appends first 3 characters of arguments to list; returns list
+    users = []
+    for entry in args:
+        users.append(entry[0:3])
+    return users
+
+# You may alter the code below to view your return value(s).
+# Only the function return values will be graded for this assessment.
+
+#print(new_account(1, 125))
+# Expected return: user125
+
+#print(verify_account_type('contractor'))
+# Expected return: contractor is not a valid account type
+
+print(list_slice('router', 'firewall', 'subnet', 'protocol', 'gateway'))
+# Expected return: ['rou', 'fir', 'sub', 'pro', 'gat']
