@@ -6,17 +6,17 @@ def remove_admin(usernames, limit):
     # remove "admin" usernames based on limit
     # return validated list with appended "validated" entry
     # return count of removed admin usernames   
-    for username in usernames:
-        if i < limit:
-            if username.startswith("admin"):
-                admin_count += 1
-            else:
-                validated.append(username)
+    total_usernames = len(usernames)
+    #while i < total_usernames:
+    while i < limit:
+        if not "admin" in usernames[i]:
+            validated.append(usernames[i])
         else:
-            validated.append(username)
-            i += 1
+            admin_count += 1
+        i += 1
+
     validated.append("validated")
-    
+        
     return validated, admin_count
 
 # You may alter the code below to view your return value(s).
