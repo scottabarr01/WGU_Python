@@ -1,0 +1,16 @@
+# create read_first_row() function
+# return first line of document as string
+
+def read_first_row(csv_path):
+    with open(csv_path, 'r') as csvfile:
+        firstline = csvfile.readline()
+        return firstline.strip()
+
+# You may alter the code below to view your return value(s).
+# Only the read_first_row function will be graded for this assessment.
+
+# print(read_first_row("csv-files/network_devices.csv"))
+# Expected return: Device ID,Type,Model,IP Address,MAC Address
+
+# print(read_first_row("text-files/configuration.txt"))
+# Expected return: Configuration 1: VLAN setup
