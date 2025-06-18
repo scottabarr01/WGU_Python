@@ -1,3 +1,21 @@
+timestamp = str("2023-12-07T12:30:00")
+
+def update_log_list(log_list):
+    for log in log_list:
+        if log["app"] == "webserver":
+            log["level"] = "ERROR"
+        if log["app"] == "database":
+            log["timestamp"] = timestamp  
+    return log_list
+
+log_sample = [
+  {"app": "webserver", "level": "INFO", "message": "System error", "timestamp": "2023-12-07T12:25:00"},
+  {"app": "database", "level": "WARN", "message": "High CPU usage", "timestamp": "2023-12-07T12:20:00"}]
+  
+print(update_log_list(log_sample))
+
+########################################
+
 def update_log_list(log_list):
     # Write your code here.
     for log in log_list:
