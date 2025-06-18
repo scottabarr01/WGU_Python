@@ -1,9 +1,13 @@
-def identifty_high_cpu(check_cpus)
-    for cpu in check_cpus:
-        if 
-    return
+def identify_high_cpu(cpu_list):
+    high_cpu = []
+    
+    for index, cpu_usage in enumerate(cpu_list):
+        if cpu_usage > 90.0:
+            high_cpu.append(index)
+    return high_cpu
 
-cpus = [99.3, 54.4, 34.0]
+cpu_list = [85.0, 92.5, 88.0, 95.2]
+print(identify_high_cpu(cpu_list))
 
 ##################################
 
