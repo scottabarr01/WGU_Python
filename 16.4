@@ -1,0 +1,19 @@
+# Write your code here.
+def validate_id(employeeID):
+    initID = employeeID[3:]
+    deptID = employeeID[:3]
+    
+    if len(employeeID) != 8:
+        return False
+    if not initID.isdigit() or len(initID) != 5:
+        return False
+    if not deptID.isupper() or len(deptID) !=3:
+        return False
+    else:
+        return True
+
+# You may alter the code below to test your solution or print help documentation.
+# Only the validate_id function will be graded for this assessment.
+
+print(validate_id("HRD00123"))
+# help(help)
