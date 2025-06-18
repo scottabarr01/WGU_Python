@@ -1,3 +1,24 @@
+def validate_id(id):
+    if len(id) != 8:
+        return False
+    if not dept.isupper() or len(dept) != 3:
+        return False
+    if not indi.isdigit() or len(indi) != 5:
+        return False
+    else:
+        return True
+        
+
+e_id = "HRD00123"
+dept = e_id[:3]
+indi = e_id[3:]
+#print(dept)
+#print(indi)
+
+print(validate_id(e_id))
+
+################################
+
 # Write your code here.
 def validate_id(employeeID):
     initID = employeeID[3:]
