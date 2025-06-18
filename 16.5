@@ -1,3 +1,10 @@
+   if network1_bin == network2_bin:
+        return x
+    else:
+        return y
+
+########################################
+
 def same_subnet(ip1, ip2, subnet_mask):
     # convert IP addresses to binary strings
     ip1_bin = ''.join([format(int(x), '08b') for x in ip1.split('.')])
