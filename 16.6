@@ -1,0 +1,11 @@
+def identify_high_cpu(cpu_list):
+    # Write your code here.
+    return [i for i, cpuvalue in enumerate(cpu_list) if cpuvalue > 90]
+    #pass
+
+# You may alter the code below to test your solution or print help documentation.
+# Only the identify_high_cpu function will be graded for this assessment.
+
+cpu_list = [85.0, 92.5, 88.0, 95.2]
+print(identify_high_cpu(cpu_list))
+# help(help)
