@@ -1,3 +1,18 @@
+def line_count(file):
+    with open(file, "r") as f:
+        fileoutput = f.read()
+    f.close
+    lines = fileoutput.split("\n")
+    count = len(lines)
+    return count
+
+print(line_count('test.txt'))
+print(line_count('lorem.txt'))
+
+#help("open")
+
+##########################
+
 # Modify this function.
 def line_count(filename):
     f = open(filename) 
