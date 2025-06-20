@@ -1,0 +1,19 @@
+from datetime import datetime
+
+def find_latest(submissions):
+    # Specify a date format
+    date_format = '%m/%d/%Y %I:%M %p'
+        
+    # Convert string values into datetime objects.
+    dtobject = [datetime.strptime(submission, date_format) for submission in submissions]
+    
+    # Determine and return latest
+    return max(dtobject)
+    #pass
+
+# You may alter the code below to test your solution or print help documentation.
+# Only the find_latest function will be graded for this assessment.
+
+submission_timestamps = ['12/15/2023 08:45 AM', '12/14/2023 03:30 PM', '12/16/2023 11:20 AM', '12/13/2023 06:15 PM']
+print(find_latest(submission_timestamps))
+# help(datetime.strptime)
