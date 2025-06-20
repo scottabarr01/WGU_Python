@@ -1,5 +1,22 @@
 from datetime import datetime
 
+def find_latest(times):
+    date_format = '%m/%d/%Y %I:%M %p'
+    datetime_list = []
+    
+    for time in times:
+        time_newformat = datetime.strptime(time, date_format)
+        datetime_list.append(time_newformat)
+    
+    return max(datetime_list)
+
+test_list = ['12/15/2023 08:45 AM', '12/14/2023 03:30 PM', '12/16/2023 11:20 AM', '12/13/2023 06:15 PM']
+print(find_latest(test_list))
+
+#################################
+
+from datetime import datetime
+
 def find_latest(submissions):
     # Specify a date format
     date_format = '%m/%d/%Y %I:%M %p'
