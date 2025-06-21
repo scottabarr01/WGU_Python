@@ -1,7 +1,6 @@
 def line_count(file):
     with open(file, 'r', newline='') as txtfile:
         file_output = txtfile.read()
-    txtfile.close()
     split_lines = file_output.split("\n")
     number_lines = len(split_lines)
         
