@@ -1,7 +1,7 @@
 def validate_id(id):
     if len(id) != 8:
         return False
-    if not dept.isupper() or len(dept) != 3:
+    if not dept.isupper() or not dept.isalpha() or len(dept) != 3:
         return False
     if not indi.isdigit() or len(indi) != 5:
         return False
