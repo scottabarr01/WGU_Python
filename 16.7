@@ -1,18 +1,14 @@
 def line_count(file):
-    with open(file, 'r', newline='') as txtfile:
+    with open(file, 'r') as txtfile:
         file_output = txtfile.read()
     split_lines = file_output.split("\n")
     number_lines = len(split_lines)
-        
     return number_lines
     
 test_file = "test.txt"
-print(line_count(test_file))
 
 #print(line_count('test.txt'))
-#print(line_count('lorem.txt'))
-
-#help("open")
+print(line_count('lorem.txt'))
 
 ##########################
 
