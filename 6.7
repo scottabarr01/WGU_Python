@@ -1,0 +1,19 @@
+ports1 = [80, 443, 22, 21, 25, 53, 110, 143, 3389]
+ports2 = [8080, 8443, 3306, 5432, 1521, 27017, 5900, 6667, 8081]
+# do not edit above this line
+
+# concatenate using + operator
+all_ports = ports1 + ports2
+
+# concatenate using extend() method
+ports1.extend(ports2)
+
+# do not edit below this line
+print(all_ports)
+print(ports1)
+print(ports1 == all_ports)
+
+# Expected output
+# [80, 443, 22, 21, 25, 53, 110, 143, 3389, 8080, 8443, 3306, 5432, 1521, 27017, 5900, 6667, 8081]
+# [80, 443, 22, 21, 25, 53, 110, 143, 3389, 8080, 8443, 3306, 5432, 1521, 27017, 5900, 6667, 8081]
+# True
