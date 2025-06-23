@@ -1,0 +1,18 @@
+access_log = ('user46', 'user84', 'guest49', 'admin51', 'guest11', 'guest60', 'admin49', 'guest81', 'admin22', 'admin65', 'user25', 'user37', 'user52', 'user17', 'user22', 'guest94', 'admin55', 'admin49', 'guest6', 'user41', 'admin82', 'user35', 'user43', 'guest85', 'admin15', 'guest67', 'guest35', 'user5', 'guest53', 'admin27', 'user93', 'admin58', 'user73', 'guest72', 'admin88', 'admin47', 'admin87', 'user61', 'admin29', 'admin84', 'admin31', 'guest26', 'admin74', 'admin31', 'admin51', 'guest67', 'admin22', 'user41', 'admin72', 'user91')
+# do not edit above this line
+
+# output first 5 usernames
+print(access_log[:5])
+
+# output last 5 usernames
+print(access_log[-5:])
+
+# output if "user61" appears in access_log
+user = 'user61' in access_log
+print(user)
+
+
+# Expected output
+# ('user46', 'user84', 'guest49', 'admin51', 'guest11')
+# ('guest67', 'admin22', 'user41', 'admin72', 'user91')
+# True
